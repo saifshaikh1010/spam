@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Propose Day</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: linear-gradient(117deg, #ff41f7 0%, rgba(255, 73, 73, 0.81) 100%);
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      font-size: 72px;
+      margin-top: 50px;
+    }
+
+    .heart-background {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .heart-background p {
+      color: white;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .heart-background h2 {
+      color: white;
+      font-size: 24px;
+    }
+
+    .floating-hearts {
+      font-size: 40px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .heart {
+      margin: 0 5px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    .surprise-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .surprise-button:hover {
+      background-color: #ff1493;
+    }
+
+    #surpriseMessage, #moreSurprise {
+      display: none;
+      font-size: 20px;
+      color: #ff69b4;
+      margin-top: 30px;
+    }
+
+    #moreSurprise {
+      font-weight: bold;
+      color: #ff1493;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="parentElement">
+    <div class="d-flex justify-content-center">
+      <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_mywfoph1.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    </div>
+    <h1>Hey Spamudi, click here for your surprise! 💖</h1>
+    <div class="d-flex justify-content-center">
+      <button onclick="showSurprise()" class="surprise-button">I want surprise</button>
+      <br>
+      <button onclick="noSurprise()" class="surprise-button">No, I don’t want surprise</button>
+    </div>
+  </div>
+
+  <!-- Surprise Message -->
+  <div id="surpriseMessage" class="heart-background">
+    <p>Happy Propose Day Spamudi! 💖</p>
+    <p>
+      I still remember the first day we met, It was a simple introduction, but our eyes met and the sparks flew. That eye contact we made at Katraj Chowk, wow, unbelievable! It was a close call.
+    </p>
+    <p>
+      And then your smile hit me like a brick wall! It's been almost 1 year now since we met, and I still remember that touch under the table at our first dinner while traveling to Pune.
+    </p>
+    <p>
+      I still remember the fun we had in my car while traveling. I still remember my favorite song which you played, and that was already my favorite! I don’t know how we were so close to sitting together there...
+    </p>
+    <p>
+      I don’t need a thousand reasons to love you; I just need one... and that's you.
+    </p>
+    <!-- Button for more surprise -->
+    <button onclick="showMoreSurprise()" class="surprise-button">Click for more surprise</button>
+  </div>
+
+  <!-- More Surprise Message (Bold) -->
+  <div id="moreSurprise">
+    <p><strong>I LOVE YOU SO MUCH SPAMUDI! This is handmade specially for you from Your saifudi, ❤️</strong></p>
+  </div>
+
+  <div class="floating-hearts">
+    <span class="heart">❤️</span>
+    <span class="heart">💖</span>
+    <span class="heart">💕</span>
+  </div>
+
+  <script>
+    // Function to show the first surprise message
+    function showSurprise() {
+      // Hide the initial content (button area)
+      document.getElementById('parentElement').style.display = 'none';
+      
+      // Show the first surprise message
+      document.getElementById('surpriseMessage').style.display = 'block';
+    }
+
+    // Function to show the second (more) surprise message
+    function showMoreSurprise() {
+      // Show the second surprise message
+      document.getElementById('moreSurprise').style.display = 'block';
+    }
+
+    // Function when "No" button is clicked
+    function noSurprise() {
+      alert("Ohh hoooo, bad luck!");
+    }
+  </script>
+</body>
+</html>
